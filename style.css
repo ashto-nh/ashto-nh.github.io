@@ -11,19 +11,20 @@
 body {
 	font-family: Calibri;
 	font-weight: bold;
-	color: #4C4C6D;
+	color: var(--text);
 }
 
 body > a {
 	color: var(--accent);
 }
 
-p {
-	max-width: 800;
-}
-
 a {
 	color: var(--background)
+}
+
+a > .box > .panel > p {
+	color: var(--background);
+	background-color: var(--accent);
 }
 
 .images img {
@@ -59,11 +60,6 @@ a {
 	border-radius: 8px;
 }
 
-a > .box > .panel > p {
-	color: var(--background);
-	background-color: var(--accent);
-}
-
 .overlay {
 	position: fixed;
 	top: 0;
@@ -78,15 +74,16 @@ a > .box > .panel > p {
 }
 
 .popup {
-	margin: 10% auto;
-	position: relative;
+	margin: 5%;
 	object-fit: cover;
-	max-width: 1500;
+	padding-bottom: 56.25%;
 }
 
 .popup > iframe {
-	width: 700px;
-	height: 400px;
+	width: 100%;
+	height: 100%;
+	max-width: 700;
+	max-height: 400;
 	object-fit: contain;
 	border-radius: 8px;
 }
